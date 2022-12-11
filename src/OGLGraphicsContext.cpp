@@ -65,7 +65,7 @@ bool COGLGraphicsContext::Initialize(uint32 dwWidth, uint32 dwHeight, BOOL bWind
     }
 
     int  depthBufferDepth = options.OpenglDepthBufferSetting;
-    int  colorBufferDepth = 32;
+    int  colorBufferDepth = 24;
     int bVerticalSync = windowSetting.bVerticalSync;
     if( options.colorQuality == TEXTURE_FMT_A4R4G4B4 ) colorBufferDepth = 16;
 
@@ -171,7 +171,7 @@ bool COGLGraphicsContext::ResizeInitialize(uint32 dwWidth, uint32 dwHeight, BOOL
     CGraphicsContext::Initialize(dwWidth, dwHeight, bWindowed );
 
     int  depthBufferDepth = options.OpenglDepthBufferSetting;
-    int  colorBufferDepth = 32;
+    int  colorBufferDepth = 24;
     int bVerticalSync = windowSetting.bVerticalSync;
     if( options.colorQuality == TEXTURE_FMT_A4R4G4B4 ) colorBufferDepth = 16;
 
