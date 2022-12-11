@@ -853,11 +853,11 @@ void DLParser_Process(OSTask * pTask)
 
 
     // Check if we need to purge (every 5 milliseconds)
-    if (status.gRDPTime - status.lastPurgeTimeTime > 5)
-    {
-        gTextureManager.PurgeOldTextures();
-        status.lastPurgeTimeTime = status.gRDPTime;
-    }
+//  if (status.gRDPTime - status.lastPurgeTimeTime > 5)
+//  {
+//      gTextureManager.PurgeOldTextures();
+//      status.lastPurgeTimeTime = status.gRDPTime;
+//  }
 
     status.dwNumDListsCulled = 0;
     status.dwNumTrisRendered = 0;
@@ -1680,11 +1680,11 @@ void RDP_DLParser_Process(void)
     gDlistStack[gDlistStackPointer].countdown = MAX_DL_COUNT;
 
     // Check if we need to purge (every 5 milliseconds)
-    if (status.gRDPTime - status.lastPurgeTimeTime > 5)
-    {
-        gTextureManager.PurgeOldTextures();
-        status.lastPurgeTimeTime = status.gRDPTime;
-    }
+//  if (status.gRDPTime - status.lastPurgeTimeTime > 5)
+//  {
+//      gTextureManager.PurgeOldTextures();
+//      status.lastPurgeTimeTime = status.gRDPTime;
+//  }
     
     // Lock the graphics context here.
     CRender::g_pRender->SetFillMode(RICE_FILLMODE_SOLID);
